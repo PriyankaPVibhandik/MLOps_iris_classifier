@@ -5,7 +5,7 @@ stages:
     outs:
     - path: data/raw/iris_raw.csv
       hash: md5
-      md5: bae4594dd7a83e05979e7c5e8431a654
+      md5: 9f2760866f6bbc3818d1b16d5da6b850
       size: 8992
   preprocess:
     cmd: python src/pipeline/preprocess.py --input data/raw/iris_raw.csv 
@@ -13,7 +13,7 @@ stages:
     deps:
     - path: data/raw/iris_raw.csv
       hash: md5
-      md5: bae4594dd7a83e05979e7c5e8431a654
+      md5: 9f2760866f6bbc3818d1b16d5da6b850
       size: 8992
     - path: src/pipeline/preprocess.py
       hash: md5
