@@ -1,0 +1,7 @@
+# feature_store.yaml
+project: iris_feature_repo 
+provider: local 
+registry: data/registry.db 
+type: sqlite 
+path: data/online_store.db 
+entity_key_serialization_version: 3
