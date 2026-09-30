@@ -14,7 +14,7 @@ mlflow.set_tracking_uri(
 # 2. Define registered model URI
 # ---------------------------------------------------------
 
-MODEL_URI = "models:/iris-classifier-prod/Staging"
+MODEL_URI = "models:/iris-classifier-prod2/Staging"
 print("=" * 60)
 print("LOADING REGISTERED MODEL")
 print("=" * 60)
