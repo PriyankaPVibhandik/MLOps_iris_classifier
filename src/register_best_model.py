@@ -21,7 +21,7 @@ client = MlflowClient()
 # ---------------------------------------------------------
 
 experiment = client.get_experiment_by_name(
-    "iris-classification-baseline"
+    "iris-classification-baselines"
 )
 if experiment is None:
     raise RuntimeError(
@@ -56,7 +56,7 @@ print("F1 Score:", best_f1)
 # ---------------------------------------------------------
 
 model_uri = f"runs:/{best_run_id}/model"
-registered_model_name = "iris-classifier-prod"
+registered_model_name = "iris-classifier-prod2"
 print("\nRegistering model...")
 print("Model URI:", model_uri)
 model_version = mlflow.register_model(
