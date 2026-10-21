@@ -34,4 +34,3 @@ print("Model type:", type(model))
 
 print("\nLoaded Model:")
 print(model)
-
