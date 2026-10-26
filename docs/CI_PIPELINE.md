@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 CI Pipeline Documentation
 1. Overview
 This project uses GitHub Actions to implement a Continuous Integration (CI) pipeline for the MLOps Iris project. The workflow is defined in .github/workflows/ci.yml.
@@ -8,6 +9,8 @@ The CI pipeline checks Python code quality, executes automated tests, generates 
 The workflow consists of three jobs.
 2.1 Build and Lint
 =======
+=======
+>>>>>>> 83c18f5 (adding the docs pipeline)
 # CI Pipeline Documentation
 # 1. Overview
 This project uses GitHub Actions to implement a Continuous Integration (CI) pipeline for the MLOps Iris project. The workflow is defined in .github/workflows/ci.yml.
@@ -16,6 +19,9 @@ The CI pipeline checks Python code quality, executes automated tests, generates 
 # 2. CI Jobs
 The workflow consists of three jobs.
 # 2.1 Build and Lint
+<<<<<<< HEAD
+>>>>>>> 83c18f5 (adding the docs pipeline)
+=======
 >>>>>>> 83c18f5 (adding the docs pipeline)
 Job name: build-and-lint
 Purpose: Verify that the Python source code compiles successfully and follows the configured linting standards.
@@ -27,7 +33,11 @@ Main steps:
 ⦁	Run Flake8 on the source code.
 Success condition: Python compilation and linting complete without errors.
 <<<<<<< HEAD
+<<<<<<< HEAD
 2.2 Test Suite
+=======
+# 2.2 Test Suite
+>>>>>>> 83c18f5 (adding the docs pipeline)
 =======
 # 2.2 Test Suite
 >>>>>>> 83c18f5 (adding the docs pipeline)
@@ -47,7 +57,11 @@ Main steps:
 The artifact contains test-results.xml and coverage.xml when both files are generated successfully.
 Success condition: All tests pass.
 <<<<<<< HEAD
+<<<<<<< HEAD
 2.3 Model Quality Gate
+=======
+# 2.3 Model Quality Gate
+>>>>>>> 83c18f5 (adding the docs pipeline)
 =======
 # 2.3 Model Quality Gate
 >>>>>>> 83c18f5 (adding the docs pipeline)
@@ -62,7 +76,11 @@ Main steps:
 The normal minimum accuracy threshold is 0.90 (90%).
 Success condition: The model-quality tests pass, including the minimum accuracy assertion.
 <<<<<<< HEAD
+<<<<<<< HEAD
 3. Job Dependency Order
+=======
+# 3. Job Dependency Order
+>>>>>>> 83c18f5 (adding the docs pipeline)
 =======
 # 3. Job Dependency Order
 >>>>>>> 83c18f5 (adding the docs pipeline)
@@ -79,7 +97,11 @@ The dependency configuration uses the needs keyword:
 ⦁	model-quality-gate requires test-suite to succeed.
 Consequently, a failure in an upstream job causes downstream jobs to be skipped by default unless the workflow explicitly overrides this behavior.
 <<<<<<< HEAD
+<<<<<<< HEAD
 4. Branch Protection Ruleset
+=======
+# 4. Branch Protection Ruleset
+>>>>>>> 83c18f5 (adding the docs pipeline)
 =======
 # 4. Branch Protection Ruleset
 >>>>>>> 83c18f5 (adding the docs pipeline)
@@ -94,17 +116,23 @@ The required status checks selected in GitHub are:
 ⦁	model-quality-gate
 This configuration helps prevent changes from being merged into main when the required checks fail.
 <<<<<<< HEAD
+<<<<<<< HEAD
 5. Pull Request Verification
 A feature branch named feature/ci-verification-test was created, and a harmless README change was committed and pushed.
 A pull request was opened from this branch into main. The pull_request trigger started the GitHub Actions workflow, and all three jobs completed successfully.
 The pull request was subsequently merged after the checks passed. This verified that the CI workflow runs on pull requests as intended.
 6. Model-Quality Regression Demonstration
 =======
+=======
+>>>>>>> 83c18f5 (adding the docs pipeline)
 # 5. Pull Request Verification
 A feature branch named feature/ci-verification-test was created, and a harmless README change was committed and pushed.
 A pull request was opened from this branch into main. The pull_request trigger started the GitHub Actions workflow, and all three jobs completed successfully.
 The pull request was subsequently merged after the checks passed. This verified that the CI workflow runs on pull requests as intended.
 # 6. Model-Quality Regression Demonstration
+<<<<<<< HEAD
+>>>>>>> 83c18f5 (adding the docs pipeline)
+=======
 >>>>>>> 83c18f5 (adding the docs pipeline)
 To test the pipeline's ability to detect a model-quality regression, a temporary branch named feature/simulate-regression was created.
 The threshold in tests/test_model_quality.py was temporarily changed from:
@@ -121,10 +149,16 @@ The complete test suite reported 15 passed tests and 1 failed test. The failure 
 The demonstration pull request was not merged. The temporary branch was deleted, and the normal accuracy threshold of 0.90 was verified on main.
 Note: The regression was detected by the model-quality test within test-suite. The separate model-quality-gate job was skipped because of its configured dependency. Thus, the experiment demonstrated regression detection, but the dedicated model-quality job did not independently execute during this failure scenario.
 <<<<<<< HEAD
+<<<<<<< HEAD
 7. Conclusion
 The GitHub Actions CI pipeline automates code compilation, linting, testing, report generation, and model-quality validation. Pull-request checks and branch protection provide safeguards for changes targeting main.
 The successful normal pipeline run and the deliberately introduced regression provide evidence that the workflow executes correctly and detects a model-quality threshold violation.
 
+=======
+# 7. Conclusion
+The GitHub Actions CI pipeline automates code compilation, linting, testing, report generation, and model-quality validation. Pull-request checks and branch protection provide safeguards for changes targeting main.
+The successful normal pipeline run and the deliberately introduced regression provide evidence that the workflow executes correctly and detects a model-quality threshold violation.
+>>>>>>> 83c18f5 (adding the docs pipeline)
 =======
 # 7. Conclusion
 The GitHub Actions CI pipeline automates code compilation, linting, testing, report generation, and model-quality validation. Pull-request checks and branch protection provide safeguards for changes targeting main.
